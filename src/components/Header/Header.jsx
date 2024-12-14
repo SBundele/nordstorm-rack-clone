@@ -7,6 +7,7 @@ import { Text, Link, Box, Center, Flex, Image, Input, IconButton, Button } from 
 import { LuSearch } from "react-icons/lu";
 import { FaCaretDown } from "react-icons/fa";
 import "./Header.css"
+import Navigation from "../Navigation/Navigation";
 
 
 function Header() {
@@ -82,6 +83,8 @@ function Header() {
           </Box>
         </Flex>
       </Box>
+
+      <Navigation />
     </header>
   );
 }

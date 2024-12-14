@@ -1,6 +1,6 @@
 
 .offer-div{
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Open Sans", sans-serif;
 }
 .link {
     text-decoration: underline;
@@ -10,6 +10,6 @@
     left: 42px;
     bottom: 2px
 }
-.css-o0etnn, .css-12lkqqy, .css-1gjy5r9{
-    padding: 0;
+.css-o0etnn, .css-12lkqqy, .css-1gjy5r9, .css-1gjy5r9{
+    padding-inline: 0 !important;
 }
