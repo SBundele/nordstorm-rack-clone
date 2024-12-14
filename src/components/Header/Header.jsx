@@ -49,6 +49,7 @@ function Header() {
                   width="700px"
                   color="black"
                   placeholder="Search for products or brand"
+                  className="border"
                 />
               </Box>
             </Flex>
