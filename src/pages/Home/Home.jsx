@@ -1,7 +1,11 @@
 import React from "react";
 import FadeCorousel from "../../components/common/FadeCorousel";
 import StockingSec from "../../components/common/StockingSec";
+import Event from "../../components/common/Event";
+import Banner from "../../components/common/Banner";
 import bannerImg from "../../assets/images/sale-banner.webp";
+import dealImg from "../../assets/images/flash-deal.webp"
+import brandImg from "../../assets/images/brand.webp"
 
 import { Heading, Flex, Button, Image } from "@chakra-ui/react";
 
@@ -33,10 +37,11 @@ function Home() {
       </section>
 
       <section className="my-14">
-        <div className="relative">
-          <Image src={bannerImg} alt="Limited Time Sale Image"></Image>
-          <p className="pos">Shop Limited-Time Sales</p>
-        </div>
+        <Banner
+          url={bannerImg}
+          className="pos"
+          secTxt="Shop Limited-Time Sales"
+        />
       </section>
 
       <FadeCorousel />
@@ -56,7 +61,44 @@ function Home() {
         </Flex>
 
         <StockingSec />
-        
+      </section>
+
+      <section className="my-5">
+        <Banner url={dealImg} className="deal" secTxt="All Flash Events" />
+      </section>
+
+      <section className="my-7">
+        <Event />
+      </section>
+
+      <section className="my-5">
+        <Banner url={brandImg} className="brand" secTxt="Top Brands" />
+      </section>
+
+      <section className="my-10 stocking-suffer">
+        <Flex justifyContent="space-between" alignItems="center">
+          <h2 className="text-2xl font-semibold">Must-Have Gifts</h2>
+          <div>
+            <Button
+              className="border-2 px-5 py-2"
+              variant="outline"
+              borderColor="blue.400"
+            >
+              View All
+            </Button>
+          </div>
+        </Flex>
+        <ul>
+          <Flex gap="8">
+            <li className="font-bold py-2 cursor-pointer active">Best Gifts</li>
+            <li className="font-bold py-2 cursor-pointer">Under $25</li>
+            <li className="font-bold py-2 cursor-pointer">Under $50</li>
+            <li className="font-bold py-2 cursor-pointer">Luxe & Designer</li>
+            <li className="font-bold py-2 cursor-pointer">Gift Sets</li>
+          </Flex>
+        </ul>
+        <hr className="my-1 border-black" />
+        <StockingSec />
       </section>
     </main>
   );
