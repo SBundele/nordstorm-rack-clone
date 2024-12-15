@@ -1,4 +1,7 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+
+// context imports
+import { ShowDropdown } from "../../App";
 
 // component imports
 import FadeCorousel from "../../components/common/FadeCorousel";
@@ -19,9 +22,12 @@ import { Heading, Flex, Button, Image } from "@chakra-ui/react";
 import "./Home.css";
 
 function Home() {
+  const {setIsModalOpen} = useContext(ShowDropdown)
 
+  const openModal = () => setIsModalOpen(true); 
+  
   return (
-    <main className="mx-10">
+    <>
       <section className="my-8">
         <Flex
           direction="column"
@@ -37,6 +43,7 @@ function Home() {
             variant="outline"
             width="300px"
             borderColor="blue.400"
+            onClick={() => openModal()}
           >
             Sign In or Create an Account
           </Button>
@@ -110,7 +117,7 @@ function Home() {
       <section>
         <Banner url={signupImg} className="signUp" secTxt="" />
       </section>
-    </main>
+    </>
   );
 }
 

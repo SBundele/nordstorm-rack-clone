@@ -31,7 +31,7 @@ const settings = {
     <div className="container">
       <Slider {...settings}>
         {events.map((event) => (
-          <div className="event">
+          <div className="event" key={event.id}>
             <div className="event-img">
               <Image src={event.img} alt="event-image" />
             </div>

@@ -10,10 +10,11 @@ import "./Header.css"
 import Navigation from "../Navigation/Navigation";
 import Dropdown from "../common/Dropdown";
 import { ShowDropdown } from "../../App";
+import SignIn from "../common/SignIn";
 
 
 function Header() {
-  const {showDropDown} = useContext(ShowDropdown)
+  const {showDropDown, isModalOpen} = useContext(ShowDropdown)
   return (
     <header className="header">
       <Box bg="green.400" p="1.5" className="offed-div">
@@ -91,6 +92,7 @@ function Header() {
       <Navigation />
 
       {showDropDown && <Dropdown />}
+      {isModalOpen && <SignIn />}
     </header>
   );
 }

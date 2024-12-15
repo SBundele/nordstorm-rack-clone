@@ -12,15 +12,18 @@ export const ShowDropdown = createContext(false);
 
 function App() {
   const [showDropDown, setShowDropDown] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <>
       <Router>
-        <ShowDropdown.Provider value={{ showDropDown, setShowDropDown }}>
+        <ShowDropdown.Provider value={{ showDropDown, setShowDropDown, isModalOpen, setIsModalOpen }}>
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
+          <main id="main-content" className="mx-10">
+            <Routes>
+              <Route path="/" element={<Home />} />
+            </Routes>
+          </main>
           <Footer />
         </ShowDropdown.Provider>
       </Router>
