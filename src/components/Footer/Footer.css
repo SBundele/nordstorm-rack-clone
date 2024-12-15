@@ -1,0 +1,7 @@
+.footer{
+    background-color: #f0f3f5;
+}
+.footer-body > div > ul > li:hover, .footer-footer ul > li:hover{
+    text-decoration: underline;
+    color: rgb(30, 30, 247);
+}

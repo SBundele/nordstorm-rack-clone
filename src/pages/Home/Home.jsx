@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+
+// component imports
 import FadeCorousel from "../../components/common/FadeCorousel";
 import StockingSec from "../../components/common/StockingSec";
 import Event from "../../components/common/Event";
 import Banner from "../../components/common/Banner";
+
+// Image imports
 import bannerImg from "../../assets/images/sale-banner.webp";
 import dealImg from "../../assets/images/flash-deal.webp"
 import brandImg from "../../assets/images/brand.webp"
+import signupImg from "../../assets/images/sign-up.webp"
 
+// chakra ui imports
 import { Heading, Flex, Button, Image } from "@chakra-ui/react";
 
+// css imports
 import "./Home.css";
 
 function Home() {
@@ -99,6 +106,9 @@ function Home() {
         </ul>
         <hr className="my-1 border-black" />
         <StockingSec />
+      </section>
+      <section>
+        <Banner url={signupImg} className="signUp" secTxt="" />
       </section>
     </main>
   );

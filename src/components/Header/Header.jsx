@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import rackLogo from "../../assets/images/rack-logo.svg";
 import storeLogo from "../../assets/images/store-logo.svg"
 import purchaseLogo from "../../assets/images/purchase-logo.svg"
@@ -8,9 +8,12 @@ import { LuSearch } from "react-icons/lu";
 import { FaCaretDown } from "react-icons/fa";
 import "./Header.css"
 import Navigation from "../Navigation/Navigation";
+import Dropdown from "../common/Dropdown";
+import { ShowDropdown } from "../../App";
 
 
 function Header() {
+  const {showDropDown} = useContext(ShowDropdown)
   return (
     <header className="header">
       <Box bg="green.400" p="1.5" className="offed-div">
@@ -86,6 +89,8 @@ function Header() {
       </Box>
 
       <Navigation />
+
+      {showDropDown && <Dropdown />}
     </header>
   );
 }

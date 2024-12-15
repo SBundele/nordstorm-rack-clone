@@ -107,3 +107,12 @@
 .active {
     border-bottom: 5px Solid blue;
 }
+.signup{
+    display: none;
+}
+.dropdown{
+    left: 0px;
+    background-color: white;
+    z-index: 1000;
+    width: 100%;
+}
